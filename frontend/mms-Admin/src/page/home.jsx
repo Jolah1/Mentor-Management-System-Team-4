@@ -1,27 +1,18 @@
 import React from 'react';
-import { Container, Typography } from '@mui/material';
-import mmsLogo from '../components/image'
-const home = () => {
+import { Container, Typography, ThemeProvider } from '@mui/material';
+import logo from '../components/image';
+
+const Home = () => {
   return (
-    <Container
-      style={{ height: '100vh' }}
-      display="flex"
-      alignItems="center"
-      justifyContent="center"
-    >
-      <div>
-        <img
-          src="mmsLogo"  // Replace with the path to your logo image
-          alt="Logo"
-          style={{ width: '100px', height: '100px' }} // Customize logo size as needed
-        />
+    <Container maxWidth="sm" style={{ height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+      <div style={{ textAlign: 'center' }}>
+        <img src={logo} alt="Logo" width="100" height="100" />
         <Typography variant="h4" align="center">
           Mentor Management System
         </Typography>
-        {/* Add additional content or components for your landing page */}
       </div>
     </Container>
   );
 };
 
-export default home;
+export default Home;
